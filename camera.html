@@ -65,9 +65,21 @@
 
 				// A button will call this function
 				//
+			/*
+				funciona
 				function capturePhoto() {
 				  // Take picture using device camera and retrieve image as base64-encoded string
 				  navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50, destinationType: destinationType.DATA_URL });
+				}
+        */
+				//probando parametros
+				Camera.Direction = {
+            BACK : 0       // Use the back-facing camera
+           // FRONT : 1      // Use the front-facing camera
+        };
+				function capturePhoto() {
+				  // Take picture using device camera and retrieve image as base64-encoded string
+				  navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50, destinationType: destinationType.DATA_URL ,cameraDirection: navigator.camera.Direction});
 				}
 
 				// A button will call this function
